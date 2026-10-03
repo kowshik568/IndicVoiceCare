@@ -1,0 +1,25 @@
+IndicVoice Care (Code‑Mixed Voice Customer Support Agent)
+
+Project Name: IndicVoice Care
+Tech Stack: FastAPI, Python 3.12+, Gnani AI native models (Prisma v2.5, Evon LLM, Timbre v2.5)
+
+Deliverables:
+1. requirements.txt – pinned dependencies.
+2. app.py – FastAPI service exposing /process endpoint (STT → LLM → TTS).
+3. README.md – setup, configuration, and usage instructions.
+4. workspace_description.txt – this exact text (the participant workspace description) for competition submission.
+
+Environment Variables (to be set in .env or system):
+- GNANI_API_KEY – Gnani AI API key.
+- PRISMA_ENDPOINT – URL for Prisma STT service.
+- EVON_ENDPOINT – URL for Evon LLM service.
+- TIMBRE_ENDPOINT – URL for Timbre TTS service.
+
+Folder Structure (relative to project root):
+- app.py
+- requirements.txt
+- README.md
+- workspace_description.txt
+- outputs/   (runtime generated audio files)
+
+The service processes audio uploads, returns generated response audio, and includes transcript and LLM response in response headers.
